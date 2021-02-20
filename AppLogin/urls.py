@@ -1,11 +1,13 @@
 from django.urls import path
-from AppLogin import views
+from.import views
 
 app_name = 'AppLogin'
 
 urlpatterns = [
 
-    path('account/signup/', views.sign_up, name='signup'),
-    path('account/login/', views.login_user, name='login'),
-    path('account/logout/', views.logout_user, name='logout'),
+    path('signup/', views.sign_up, name='signup'),
+    path('login/', views.login_user, name='login'),
+    path('logout/', views.logout_user, name='logout'),
+    path('profile/', views.user_profile, name='profile'),
+     
 ]
