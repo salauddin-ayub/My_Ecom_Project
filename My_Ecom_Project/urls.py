@@ -12,6 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('AppShop.urls')),
     path('account/', include('AppLogin.urls')),
+    path('shop/', include('AppOrder.urls')),
 ]
 
 
