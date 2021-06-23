@@ -13,6 +13,8 @@ urlpatterns = [
     path('', include('AppShop.urls')),
     path('account/', include('AppLogin.urls')),
     path('shop/', include('AppOrder.urls')),
+    path('payment/', include('AppPayment.urls')),
+
 ]
 
 

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'AppLogin',
     'AppShop',
     'AppOrder',
+    'AppPayment',
 ]
 
 
