@@ -1,10 +1,14 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.contrib import messages
 from AppOrder.models import Order
 from AppPayment.forms import BillingAddress
 from AppPayment.forms import BillingForm
 from django.contrib.auth.decorators import login_required 
 # Create your views here.
+
+
+from decimal import Decimal
+import socket
 
 @login_required
 def checkout(request):
@@ -25,4 +29,6 @@ def checkout(request):
     #print(order_items)  
     order_total = order_qs[0].get_totals()      
 
-    return render(request, 'checkout.html', context={"form":form, "order_items":order_items, "order_total":order_total})
+    return render(request, 'checkout.html', context={"form":form, "order_items":order_items, "order_total":order_total, "saved_address":saved_address,})
+
+        
